@@ -1,11 +1,13 @@
-import React from 'react'
-import { Avatar, Box, Grid, IconButton } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
-import Typed from 'react-typed'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import Navbar from '../../../component/Navbar'
-import Aku from '../../../assets/image/Avatar.jpg'
-import Hello from '../../../assets/image/hello3.png'
+import React from 'react';
+import {
+  Avatar, Box, Grid, IconButton,
+} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Typed from 'react-typed';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Navbar from '../../../component/Navbar';
+import Aku from '../../../assets/image/Avatar.jpg';
+import Hello from '../../../assets/image/hello3.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(20),
     height: theme.spacing(20),
     boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-    border: '1px solid tomato'
+    border: '1px solid tomato',
   },
   box: {
     // position:"absolute",
@@ -32,43 +34,43 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor:"red",
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
   },
   headerText: {
-    color: theme.palette.info.light
+    color: theme.palette.info.light,
   },
   subtitleText: {
     fontSize: 25,
     color: theme.palette.warning.light,
     [theme.breakpoints.down('sm')]: {
-      fontSize: 20
-    }
+      fontSize: 20,
+    },
   },
   subtitleText2: {
     fontSize: 16,
     color: theme.palette.success.light,
     [theme.breakpoints.down('sm')]: {
-      fontSize: 14
-    }
-  }
-}))
+      fontSize: 14,
+    },
+  },
+}));
 
 const Home = () => {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Navbar/>
+      <Navbar />
       {/* <CssBaseline/> */}
       <Box className={classes.box}>
         <Grid container justify="center">
-          <Avatar src={Aku} className={classes.avatar}/>
+          <Avatar src={Aku} className={classes.avatar} />
         </Grid>
         <Typed
           className={classes.subtitleText}
           strings={['Muhamad Hamdan Arrosyid']}
           typeSpeed={40}
         />
-        <br/>
+        <br />
         <Typed
           strings={['Web Developer and mecahnical thinking', 'No live withou production']}
           typeSpeed={40}
@@ -76,12 +78,12 @@ const Home = () => {
           loop
           className={classes.subtitleText2}
         />
-        <br/>
+        <br />
         <IconButton>
-          <ExpandMoreIcon fontSize="large"/>
+          <ExpandMoreIcon fontSize="large" />
         </IconButton>
       </Box>
     </Box>
-  )
-}
-export default Home
+  );
+};
+export default Home;
